@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-franzininho",
+      "id": "franzininho",
+      "top": 330,
+      "left": 42,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ds1307",
+      "id": "rtc1",
+      "top": 235,
+      "left": 325,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr1",
+      "top": 260,
+      "left": 100,
+      "rotate": 180,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr2",
+      "top": 260,
+      "left": 225,
+      "rotate": 180,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 60,
+      "left": 108,
+      "rotate": 0,
+      "hide": false,
+      "attrs": { "digits": "4", "color": "#0f0", "colon": "true" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 180,
+      "left": 60,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 180,
+      "left": 80,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 180,
+      "left": 100,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 180,
+      "left": 120,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 180,
+      "left": 140,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 180,
+      "left": 160,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": 180,
+      "left": 180,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": 180,
+      "left": 200,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r9",
+      "top": 180,
+      "left": 220,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r10",
+      "top": 180,
+      "left": 240,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r11",
+      "top": 180,
+      "left": 260,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r12",
+      "top": 180,
+      "left": 280,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { "value": "180" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:DIG1", "r4:1", "green", [ "v-10", "h-88", "v85", "h43" ] ],
+    [ "sevseg1:DIG2", "r1:1", "green", [ "v-25", "h-133", "v115", "h21" ] ],
+    [ "sevseg1:DIG3", "r12:1", "green", [ "v-25", "h118", "v113", "h-24" ] ],
+    [ "sevseg1:DIG4", "r9:1", "green", [ "v15", "h15" ] ],
+    [ "sevseg1:A", "r3:1", "green", [ "v-15", "h-103", "v95", "h30" ] ],
+    [ "sevseg1:B", "r11:1", "green", [ "v-18", "h103", "v100", "h-15" ] ],
+    [ "sevseg1:C", "r7:1", "green", [ "v25", "h-5" ] ],
+    [ "sevseg1:D", "r6:1", "green", [ "v15", "h-29" ] ],
+    [ "sevseg1:E", "r5:1", "green", [ "v15", "h-3" ] ],
+    [ "sevseg1:F", "r2:1", "green", [ "v-20", "h-118", "v105", "h16" ] ],
+    [ "sevseg1:G", "r8:1", "green", [ "v20", "h17" ] ],
+    [ "sevseg1:CLN", "r10:1", "green", [ "h0", "v-10", "h88", "v85", "h-30" ] ],
+    [ "sr1:Q2", "r6:2", "green", [ "v-15", "h30" ] ],
+    [ "sr1:Q3", "r5:2", "green", [ "v-20", "h20" ] ],
+    [ "sr1:Q4", "r4:2", "green", [ "v-25", "h11" ] ],
+    [ "sr1:Q5", "r3:2", "green", [ "v-25", "h-25" ] ],
+    [ "sr1:Q6", "r2:2", "green", [ "v-20", "h-34" ] ],
+    [ "sr1:Q7", "r1:2", "green", [ "v-15", "h-43" ] ],
+    [ "sr2:Q2", "r12:2", "green", [ "v-30", "h9" ] ],
+    [ "sr2:Q3", "r11:2", "green", [ "v-35", "h15" ] ],
+    [ "sr2:Q4", "r10:2", "green", [ "v-25", "h-13" ] ],
+    [ "sr2:Q5", "r9:2", "green", [ "v-25", "h-25" ] ],
+    [ "sr2:Q6", "r8:2", "green", [ "v-20", "h-34" ] ],
+    [ "sr2:Q7", "r7:2", "green", [ "v-15", "h-43" ] ],
+    [ "franzininho:GND.2", "rtc1:GND", "black", [ "v-29", "h120", "v-60" ] ],
+    [ "franzininho:GND.2", "sr1:GND", "black", [ "v-29", "h-95", "v-58", "h11" ] ],
+    [ "franzininho:GND.2", "sr2:GND", "black", [ "v-87", "h31" ] ],
+    [ "franzininho:VCC.2", "sr1:VCC", "red", [ "v-35", "h-17" ] ],
+    [ "franzininho:VCC.2", "sr2:VCC", "red", [ "v-35", "h110" ] ],
+    [ "franzininho:VCC.2", "sr1:MR", "red", [ "v-35", "h-78" ] ],
+    [ "franzininho:VCC.2", "sr2:MR", "red", [ "v-35", "h49" ] ],
+    [ "franzininho:VCC.2", "rtc1:5V", "red", [ "v-34.5", "h115", "v-47" ] ],
+    [ "franzininho:VCC.2", "sevseg1:COM", "red", [ "v-93", "h5", "v-78", "h59", "v-30", "h-28" ] ],
+    [ "franzininho:PB0", "rtc1:SDA", "orange", [ "h60", "v-151" ] ],
+    [ "franzininho:PB2", "rtc1:SCL", "purple", [ "h55", "v-123" ] ],
+    [ "sr1:Q7S", "sr2:DS", "brown", [ "h0", "v5", "h127" ] ],
+    [ "sr1:STCP", "franzininho:PB3", "orange", [ "v23", "h178", "v77" ] ],
+    [ "sr1:SHCP", "franzininho:PB4", "purple", [ "v29", "h182", "v60" ] ],
+    [ "sr2:STCP", "franzininho:PB3", "orange", [ "v23", "h53", "v77" ] ],
+    [ "sr2:SHCP", "franzininho:PB4", "purple", [ "v29", "h57", "v60" ] ],
+    [ "sr1:DS", "franzininho:PB5", "yellow ", [ "v34", "h148", "v83" ] ]
+  ]
+}

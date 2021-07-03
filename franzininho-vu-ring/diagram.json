@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-franzininho",
+      "id": "franzininho",
+      "top": 240,
+      "left": 95,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-microphone",
+      "id": "mic",
+      "top": 149,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot",
+      "top": 236,
+      "left": 380,
+      "rotate": 90,
+      "attrs": { "color": "gray" }
+    },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": 30,
+      "left": 160,
+      "attrs": { "pixels": "18", "background": "black" }
+    }
+  ],
+  "connections": [
+    [ "franzininho:GND.2", "ring1:GND", "black", [ "v-20", "h-17" ] ],
+    [ "franzininho:GND.2", "pot:GND", "black", [ "v-20", "h135", "v39" ] ],
+    [ "franzininho:GND.2", "mic:2", "black", [ "v-20", "h172" ] ],
+    [ "franzininho:VCC.2", "ring1:VCC", "red", [ "v-30", "h-17" ] ],
+    [ "franzininho:VCC.2", "pot:VCC", "red", [ "v-30", "h106", "v63" ] ],
+    [ "franzininho:PB3", "mic:1", "purple", [ "h50", "v-83.5", "h41" ] ],
+    [ "franzininho:PB4", "ring1:DIN", "yellow", [ "h30", "v-76", "h-102" ] ],
+    [ "franzininho:PB5", "pot:SIG", "orange", [ "h60", "v-18" ] ]
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-franzininho",
+      "id": "franzininho",
+      "top": 160,
+      "left": 40,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ssd1306",
+      "id": "ssd1306",
+      "top": 160,
+      "left": 320,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 10,
+      "left": 227,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "franzininho:GND.2", "ssd1306:GND", "black", [ "v-35", "h245" ] ],
+    [ "franzininho:VCC.2", "ssd1306:VIN", "red", [ "v-45", "h226" ] ],
+    [ "franzininho:GND.2", "ntc1:GND", "black", [ "v-35", "h147" ] ],
+    [ "franzininho:VCC.2", "ntc1:VCC", "red", [ "v-45", "h98" ] ],
+    [ "franzininho:PB3", "ntc1:OUT", "yellow", [ "h0" ] ],
+    [ "franzininho:PB0", "ssd1306:DATA", "purple", [ "h50", "v-98", "h47" ] ],
+    [ "franzininho:PB2", "ssd1306:CLK", "green", [ "h40", "v-88", "h68" ] ]
+  ]
+}

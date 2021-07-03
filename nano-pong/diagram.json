@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "Wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-nano",
+      "id": "nano",
+      "top": 600,
+      "left": 300,
+      "attrs": { "frequency": "16m" }
+    },
+    { "type": "wokwi-tv", "id": "tv", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 580, "left": 150, "attrs": {} },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 220,
+      "left": -155,
+      "rotate": 90,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot2",
+      "top": 220,
+      "left": 720,
+      "rotate": 90,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    [ "nano:GND.1", "buzzer:1", "black", [ "v15", "*", "h0" ] ],
+    [ "nano:GND.1", "pot1:GND", "black", [ "v15", "h0", "*", "h0", "v0" ] ],
+    [ "nano:GND.1", "pot2:GND", "black", [ "v15", "h0", "*", "h0", "v0" ] ],
+    [ "nano:5V", "pot1:VCC", "red", [ "v25", "h-433", "v-525", "h-31" ] ],
+    [ "nano:5V", "pot2:VCC", "red", [ "v25", "h444", "v-515", "h-31" ] ],
+    [ "nano:7", "tv:IN", "green", [ "v0", "v0", "h0" ] ],
+    [ "nano:9", "tv:SYNC", "brown", [ "v0", "*", "v15" ] ],
+    [ "nano:11", "buzzer:2", "purple", [ "v-15", "h-35", "v78", "h-59" ] ],
+    [ "nano:A0", "pot1:SIG", "green", [ "v35", "h-443", "v-535", "h41" ] ],
+    [ "nano:A1", "pot2:SIG", "green", [ "v35", "h520", "v-535", "h-66" ] ]
+  ]
+}

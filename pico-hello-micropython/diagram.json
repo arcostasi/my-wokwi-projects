@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "author": "Uri Shaked, Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 60,
+      "left": 60,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 10,
+      "left": 80,
+      "attrs": { "common": "anode" }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw1",
+      "top": 70,
+      "left": 30,
+      "attrs": { "bounce": "0" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.1", "led1:C", "black", [ "*", "v0" ] ],
+    [ "pico:GP2", "sevseg1:A", "green", [ "v-121", "h-40" ] ],
+    [ "pico:GP3", "sevseg1:B", "green", [ "v-117", "h-21" ] ],
+    [ "pico:GP4", "sevseg1:C", "green", [ "v-36", "h-21" ] ],
+    [ "pico:GP5", "sevseg1:D", "green", [ "v-32", "h-2" ] ],
+    [ "pico:GP6", "sevseg1:E", "green", [ "v-28", "h-20" ] ],
+    [ "pico:GP7", "sevseg1:G", "green", [ "v-24", "h-24", "v-92", "h14" ] ],
+    [ "pico:GP8", "sevseg1:F", "green", [ "v-20", "h-22", "v-100", "h21" ] ],
+    [ "pico:VSYS", "sevseg1:COM.2", "red", [ "v10", "h32", "v-100", "h-42", "v-114", "h-65" ] ],
+    [ "pico:GND.3", "sw1:3", "black", [ "v-12", "h-16" ] ],
+    [ "pico:GP11", "sw1:2", "green", [ "v-8", "h-6" ] ],
+    [ "pico:3V3", "sw1:1", "red", [ "v10", "h-158", "v-100", "h42" ] ]
+  ],
+  "serialMonitor": { "display": "terminal" }
+}

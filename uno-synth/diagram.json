@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 20,
+      "left": 208,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-midi-player",
+      "id": "midi",
+      "top": 85,
+      "left": 515,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 330,
+      "left": 50,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot2",
+      "top": 330,
+      "left": 150,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot3",
+      "top": 330,
+      "left": 250,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot4",
+      "top": 330,
+      "left": 350,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot5",
+      "top": 330,
+      "left": 450,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 85,
+      "left": 515,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 166,
+      "left": 147,
+      "rotate": 90,
+      "hide": false,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 90,
+      "left": 152,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw1",
+      "top": -40,
+      "left": 400,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw2",
+      "top": -40,
+      "left": 307,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pot1:GND", "uno:GND.2", "black", [ "v5", "h435", "v-265", "h0" ] ],
+    [ "pot2:GND", "uno:GND.2", "black", [ "v5", "h335", "v-265", "h0" ] ],
+    [ "pot3:GND", "uno:GND.2", "black", [ "v5", "h235", "v-265", "h0" ] ],
+    [ "pot4:GND", "uno:GND.2", "black", [ "v5", "h135", "v-265", "h0" ] ],
+    [ "pot5:GND", "uno:GND.2", "black", [ "v5", "h35", "v-265", "h0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v-45", "h0" ] ],
+    [ "pot2:VCC", "uno:5V", "red", [ "v-45", "h0" ] ],
+    [ "pot3:VCC", "uno:5V", "red", [ "v-45", "h0" ] ],
+    [ "pot4:VCC", "uno:5V", "red", [ "v-45", "h0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v-35", "h0" ] ],
+    [ "pot2:SIG", "uno:A1", "green", [ "v-25", "h0" ] ],
+    [ "pot3:SIG", "uno:A2", "green", [ "v-15", "h0" ] ],
+    [ "pot4:SIG", "uno:A3", "green", [ "v0" ] ],
+    [ "pot5:SIG", "uno:A4", "blue", [ "v-15", "h0" ] ],
+    [ "uno:GND.2", "bz1:1", "black", [ "v18", "h150" ] ],
+    [ "uno:3", "midi:RX", "green", [ "v12", "*", "h0" ] ],
+    [ "uno:3", "bz1:2", "purple", [ "v-15", "h55", "v208", "h60" ] ],
+    [ "uno:GND.2", "led:C", "black", [ "v18", "h-245" ] ],
+    [ "uno:5", "r1:2", "blue", [ "v-15", "h-217", "v208", "h-56" ] ],
+    [ "uno:4", "sw1:3", "green", [ "v0" ] ],
+    [ "uno:GND.1", "sw1:2", "black", [ "v-25", "h0" ] ],
+    [ "uno:GND.1", "sw2:2", "black", [ "v0", "h0" ] ],
+    [ "r1:1", "led:A", "blue", [ "h0" ] ],
+    [ "uno:7", "sw2:3", "green", [ "v0" ] ]
+  ]
+}

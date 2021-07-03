@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "id": "mega",
+      "type": "wokwi-arduino-mega",
+      "top": 680,
+      "left": 130
+    },
+    {
+      "id": "meter",
+      "type": "wokwi-neopixel-meter",
+      "top": 720,
+      "left": 100,
+      "attrs": {
+        "pixels": "256"
+      }
+    },
+    {
+      "id": "splendida",
+      "type": "wokwi-splendida",
+      "top": 0,
+      "left": -15,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {
+        "pixels": "256"
+      }
+    }
+  ],
+  "connections": [
+    [ "mega:GND.1", "splendida:VSS", "black", [] ],
+    [ "mega:5V", "splendida:VDD", "red", [] ],
+    [ "mega:3", "splendida:DIN", "green", [] ],
+    [ "mega:3", "meter:DIN", "green", [] ]
+  ]
+}
