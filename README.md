@@ -5,7 +5,7 @@ Here you will find some of my projects created in [<img src="wokwi_logo.svg" alt
 If you like it, give me a star :smile:
 
 ### Franzininho Clock
--  [franzininho-clock.ino](franzininho-clock/franzininho-clock.ino) code by [Uri Shaked](https://github.com/urish)
+-  [franzininho-clock.ino](franzininho-clock/franzininho-clock.ino) code by [Uri Shaked](https://github.com/urish)  
    [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/301738586036765194)  
    This is the basic example clock with an Franzininho DIY, 74HC595, 7 Segment Display (4 digits) and DS1307 RTC.
 
