@@ -9,6 +9,16 @@ If you like it, give me a star :smile:
    [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/301738586036765194)  
    This is the basic example clock with an Franzininho DIY, 74HC595, 7 Segment Display (4 digits) and DS1307 RTC.
 
+### Franzininho LED Scrolling Message Sign
+-  [franzininho-scrolling.ino](franzininho-scrolling/franzininho-scrolling.ino)  
+   [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/304826828859638336)  
+   LED Scrolling Message Sign with an Franzininho DIY, 4 MAX7219, DHT22 and DS1307 RTC.
+
+### Franzininho Electronic Dice
+-  [franzininho-clock.ino](franzininho-dice/franzininho-dice.ino)  
+   [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/304646764687786560)  
+   It displays a number from 1 to 6 with an Franzininho DIY and LED 8x8 MAX7219.
+
 ### Franzininho VU Ring
 -  [franzininho-vu-ring.ino](franzininho-vu-ring/franzininho-vu-ring.ino)  
    [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/303017624723259969)  
@@ -28,6 +38,8 @@ If you like it, give me a star :smile:
 -  [franzininho-ntc.ino](franzininho-ntc/franzininho-ntc.ino)  
    [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/301751077214093834)  
    NTC Temperature Sensor with an Franzininho, NTC and SSD1306.
+
+
 
 ### Nano Pong
 -  [nano-pong.ino](nano-pong/nano-pong.ino)  
