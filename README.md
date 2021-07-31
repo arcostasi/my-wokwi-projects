@@ -15,7 +15,7 @@ If you like it, give me a star :smile:
    LED Scrolling Message Sign with an Franzininho DIY, 4 MAX7219, DHT22 and DS1307 RTC.
 
 ### Franzininho Electronic Dice
--  [franzininho-clock.ino](franzininho-dice/franzininho-dice.ino)  
+-  [franzininho-dice.ino](franzininho-dice/franzininho-dice.ino)  
    [![Wokwi badge](wokwi_badge.svg)](https://wokwi.com/arduino/projects/304646764687786560)  
    It displays a number from 1 to 6 with an Franzininho DIY and LED 8x8 MAX7219.
 
