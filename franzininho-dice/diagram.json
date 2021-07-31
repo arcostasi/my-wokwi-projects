@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-franzininho",
+      "id": "franzininho",
+      "top": 160,
+      "left": 40,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "button",
+      "top": 90,
+      "left": 267,
+      "rotate": 90,
+      "hide": false,
+      "attrs": { 
+        "color": "green",
+        "key": "1"
+      }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "max",
+      "top": 184,
+      "left": 355,
+      "rotate": 0,
+      "hide": false,
+      "attrs": { 
+        "chain": "1" 
+      }
+    }
+  ],
+  "connections": [
+    [ "franzininho:GND.2", "max:GND", "black", [ "v-100", "h151.5", "v142" ] ],
+    [ "franzininho:GND.2", "button:2.l", "black", [ "v-100", "h103" ] ],
+    [ "franzininho:VIN", "max:V+", "red", [ "v-110", "h172", "v143" ] ],
+    [ "franzininho:PB0", "max:CLK", "orange", [ "v0", "*", "h-12" ] ],
+    [ "franzininho:PB1", "max:CS", "purple", [ "v0", "*", "h-20" ] ],
+    [ "franzininho:PB2", "max:DIN", "brown", [ "v0", "*", "h-30" ] ],
+    [ "franzininho:PB3", "button:1.r", "yellow", [ "h0" ] ]
+  ]
+}

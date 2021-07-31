@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Anderson Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-franzininho",
+      "id": "franzininho",
+      "top": 160,
+      "left": 40,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "max",
+      "top": 52,
+      "left": 40,
+      "rotate": 180,
+      "attrs": { "chain": "4", "color": "#0f0" }
+    },
+    {
+      "type": "wokwi-ds1307",
+      "id": "rtc1",
+      "top": 260,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 10,
+      "left": 402,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "franzininho:GND.2", "max:GND", "black", [ "v-20", "h180", "v65" ] ],
+    [ "franzininho:GND.2", "dht:GND", "black", [ "v-20", "h274" ] ],
+    [ "franzininho:GND.2", "rtc1:GND", "black", [ "v-20", "h-156", "v137", "h264", "v-41" ] ],
+    [ "franzininho:VIN", "max:V+", "red", [ "v-30", "h180", "v67" ] ],
+    [ "franzininho:VIN", "dht:VCC", "red", [ "v-30", "h254" ] ],
+    [ "franzininho:PB3", "max:CLK", "orange", [ "v0", "*", "h50" ] ],
+    [ "franzininho:PB5", "max:CS", "purple", [ "v0", "*", "h40" ] ],
+    [ "franzininho:PB4", "max:DIN", "brown", [ "v0", "*", "h30" ] ],
+    [ "franzininho:VIN", "rtc1:5V", "red", [ "v-30", "h-156", "v157", "h285", "v-38" ] ],
+    [ "franzininho:PB0", "rtc1:SDA", "yellow", [ "h179", "v104", "h-126", "v-61" ] ],
+    [ "franzininho:PB2", "rtc1:SCL", "purple", [ "h189", "v133", "h-127", "v-62" ] ],
+    [ "franzininho:PB1", "dht:SDA", "white", [ "h0" ] ]
+  ]
+}
